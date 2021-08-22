@@ -1,0 +1,19 @@
+{% extends 'base2.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<style>
+    .sample {
+        position: relative;
+        /* 今の位置を基準 */
+        left: 50px;
+        /* 左から20px */
+    }
+</style>
+<form class=sample action="" method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="作成する">
+</form>
+{% endblock content %}

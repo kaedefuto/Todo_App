@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="Navber">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}" 　>ホーム</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'signup' %}">新規登録</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">ログイン</a>
+                </li>
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="bg-light p-3 p-sm-5 mb-4 border-top">
+    <div class="container"></div>
+    <h1 class="display-4">Todoアプリ</h1>
+    <p class="lead">初めて来られた方は「アカウントをお持ちでない方」をクリックしてください.</p>
+</div>
+{% endblock header %}
+
+{% block content %}
+<center>
+    <a href="{% url 'login' %}" class="btn btn-success w-50 mb-1" role="button">ログイン</a>
+    <a href="{% url 'signup' %}" class="btn btn-primary w-50 mb-1" role="button">アカウントをお持ちでない方</a>
+</center>
+{% endblock content %}
