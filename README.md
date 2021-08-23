@@ -1,3 +1,3 @@
 # Todo_App
 
-今後Herokuにあげる予定です
+https://kaedefuto.pythonanywhere.com/home/
